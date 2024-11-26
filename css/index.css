@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --cor-primaria: #0D0D87;
+    --bg-color: #D9D9D9;
+    --bg-form: #EFEFEF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+/* TÍTULO */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    color: black;
+    font-weight: bold;
+}
+
+.painel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 6rem;
+    height: 100%;
+}
+
+.esquerda,  
+.direita {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vh;
+}
+
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+    max-height: 100vh;
+    max-width: 100vh;
+}
+
+.esquerda{
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+div a {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.meio h1 {
+    margin: 0;
+}
+
+header {
+
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: blue ;
+}
+
+.carro{
+    width: 500px;
+    height: 200px;
+}
+
+.texto-inicial{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.texto-central{
+    margin-top: 20px;
+    margin-left: -50px;
+}
+
+.texto-final{
+    margin-left: 110px;
+}
+
+.img-esquerda{
+    margin-left: 50px;
+}
+
+.esquerda img{
+    width: 300px;
+    height: 80px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Aluno</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/navegacao.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="lista-aluno.html">ALUNOS</a>
+            <a href="lista-livro.html">LIVROS</a>
+            <a href="lista-emprestimo.html">EMPRESTIMOS</a>
+        </nav>
+    </header>
+    <h1>ATUALIZAR ALUNO</h1>
+    <div class="container-formulario">
+        <form action="">
+            
+            <label>
+                Nome
+                <br>
+                <input type="text" name="input-nome-aluno" placeholder="Insira o nome do aluno" required>
+            </label>
+            <label>
+                Sobrenome
+                <br>
+                <input type="text" name="input-sobrenome-aluno" placeholder="Insira o sobrenome do aluno" required>
+            </label>
+            <label>
+                Data de Nascimento 
+                <br>
+                <input id="dataNascimento" type="date" name="dataNascimento" placeholder="Insira a data de nascimento do aluno" required>
+            </label>
+            <label>
+                Endereço
+                <br>
+                <input type="text" name="input-endereco-aluno" placeholder="Insira o endereço do aluno" required>
+            </label><label>
+                Email
+                <br>
+                <input type="text" name="input-email-aluno" placeholder="Insira o email do aluno" required>
+            </label>
+            <label>
+                Celular
+                <br>
+                <input type="number" name="input-celular-aluno" placeholder="Insira o telefone do aluno" required>
+            </label>
+
+            <input type="button" value="ATUALIZAR" onclick="formulario()">
+        </form>
+    </div>
+    <script src="js/aluno.js"></script>
+</body>
+
+</html>

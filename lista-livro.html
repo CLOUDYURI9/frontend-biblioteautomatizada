@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/navegacao.css">
+    <link rel="stylesheet" href="css/listagem.css">
+</head>
+<body onload="recuperarListaLivros()">
+    <header>
+        <nav>
+            <a href="lista-aluno.html">ALUNOS</a>
+            <a href="lista-livro.html">LIVROS</a>
+            <a href="lista-emprestimo.html">EMPRESTIMOS</a>
+        </nav>
+    </header>
+    <div class="painel">
+        <div class="esquerda">
+            <div>
+                <a href="/cadastro-livro.html">NOVO LIVRO</a>
+            </div>
+        </div>
+        <div class="meio">
+            <h1>LIVROS</h1>
+        </div>
+        <div class="direita"></div>
+    </div>
+    <div class="container-tabela">
+        <table id="">
+            <thead>
+                <tr>
+                    <th>ID LIVRO</th>
+                    <th>TITULO</th>
+                    <th>AUTOR</th>
+                    <th>EDITORA</th>
+                    <th>ANO PUBLICAÇÃO</th>
+                    <th>ISBN</th>
+                    <th>QUANTIDADE TOTAL</th>
+                    <th>QUANTIDADE DISPONIVEL</th>
+                    <th>VALOR AQUISIÇÃO</th>
+                    <th>STATUS EMPRESTIMOS</th>
+                    <th>AÇÕES</th>
+                </tr>
+            </thead>
+            <tbody id="corpoLivro">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="js/livro.js"></script>
+</body>
+</html>
