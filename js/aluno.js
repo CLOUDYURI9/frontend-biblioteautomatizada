@@ -76,10 +76,10 @@ async function formulario(idALuno) {
 
             const listaDeAlunos = await respostaServidor.json();
             criarTabelaAlunos(listaDeAlunos)
-            atualizarFormulario(listaDeAlunos)
         } catch (error) {
             console.log('Erro ao comunicar com o servidor');
             console.log(error);
+            return null;
         }
     }
 
@@ -142,9 +142,9 @@ async function criarTabelaAlunos(alunos) {
         linha.appendChild(endereco);
         linha.appendChild(email);
         linha.appendChild(celular);
-        tdAcoes.appendChild(iconAtualizar); // Adiciona o <img> dentro da célula <td>
-        linha.appendChild(tdAcoes); // Adiciona a célula de imagem à linha
-        tdAcoes.appendChild(iconExcluir); // Adiciona o <img> dentro da célula <td>
+        tdAcoes.appendChild(iconAtualizar); 
+        linha.appendChild(tdAcoes); 
+        tdAcoes.appendChild(iconExcluir); 
 
         // Adiciona a linha preenchida à tabela
         tabela.appendChild(linha);

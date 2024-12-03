@@ -9,9 +9,7 @@
 }
 
 .container-formulario form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     width: 100%;
 }
 
@@ -48,6 +46,7 @@ input[type="button"] {
     font-weight: 700;
     cursor: pointer;
     font-size: 1rem;
+    margin-left: 160px;
 }
 
 /* Ajusta o hover do botão para ter feedback visual */
@@ -67,3 +66,19 @@ input[type="button"]:hover {
     width: 50%;
     flex-direction: column;
 }
+
+.container-formulario form {
+    width: 100%;
+}
+
+.diresq{
+    display: flex;
+    flex-direction: row;
+
+   
+}
+
+.titulo {
+    margin-top: -100px;
+}
+

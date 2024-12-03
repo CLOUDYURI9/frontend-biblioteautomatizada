@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root {
-    --cor-primaria: #0D0D87;
+    --cor-primaria: #702029;
     --bg-color: #D9D9D9;
     --bg-form: #EFEFEF;
 }
@@ -74,39 +74,53 @@ div a {
 header {
 
     color: white;
-    padding: 20px;
+    padding: 4px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: blue ;
+
+
 }
 
-.carro{
-    width: 500px;
-    height: 200px;
-}
 
 .texto-inicial{
     display: flex;
     margin-top: 20px;
-    margin-left: 40px;
+    margin-left: 20px;
+    color: white;
 }
 
 .texto-central{
     margin-top: 20px;
-    margin-left: -50px;
+    margin-left: 20px;
+    color: white;
 }
 
 .texto-final{
-    margin-left: 110px;
+    margin-left: 20px;
+    color: white;
+}
+
+
+body{
+    background-image: url(../assets/images/fundo\ index.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 219vh;
+    
 }
 
 .img-esquerda{
-    margin-left: 50px;
+    width: 250px;
+    height: 200px;
+    margin-left: -250px;
 }
 
-.esquerda img{
-    width: 300px;
-    height: 80px;
+.quadrado{
+    margin-left: -200px;
+    background-color: #A6382E;
+    width: 500px;
+    height: 200px;
+    opacity: 0.7;
 }
