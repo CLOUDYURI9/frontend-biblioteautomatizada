@@ -82,7 +82,21 @@ async function criarTabelaEmprestimos(emprestimos) {
         iconAtualizar.src = 'assets/icons/pencil-square.svg'; // Define o caminho da imagem
         iconAtualizar.alt = 'Ícone de edição'; // Texto alternativo para acessibilidade
         iconAtualizar.addEventListener('click', () => {
-            window.location.href = "./atualizar-emprestimo.html";
+            // Criar objeto com os dados necessários
+            const dadosParaEnviar = {
+                idAluno: emprestimo.idAluno,
+                idLivro: emprestimo.idLivro,
+                dataEmprestimo: emprestimo.dataEmprestimo,
+                dataDevolucao: emprestimo.dataDevolucao,
+                statusEmprestimo: emprestimo.statusEmprestimo,
+                idEmprestimo: emprestimo.idEmprestimo
+            };
+        
+            // Converter para parâmetros de URL
+            const queryParams = new URLSearchParams(dadosParaEnviar).toString();
+        
+            // Redirecionar com os dados na URL
+            window.location.href = `atualizar-emprestimo.html?${queryParams}`;
         });
 
         const iconExcluir = document.createElement('img'); // Cria o elemento <img>

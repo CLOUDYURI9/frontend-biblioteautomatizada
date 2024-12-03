@@ -98,9 +98,26 @@ async function criarTabelaLivros(livros) {
         const iconAtualizar = document.createElement('img');
         iconAtualizar.src = 'assets/icons/pencil-square.svg';
         iconAtualizar.addEventListener('click', () => {
-            window.location.href = "./atualizar-livro.html";
+            // Criar objeto com os dados necessários
+            const dadosParaEnviar = {
+                titulo: livro.titulo,
+                autor: livro.autor,
+                editora: livro.editora,
+                anoPublicacao: livro.anoPublicacao,
+                isbn: livro.isbn,
+                quantTotal: livro.quantTotal,
+                quantDisponivel: livro.quantDisponivel,
+                valorAquisicao: livro.valorAquisicao,
+                statusLivroEmprestado: livro.statusLivroEmprestado,
+                idLivro: livro.idLivro
+            };
+        
+            // Converter para parâmetros de URL
+            const queryParams = new URLSearchParams(dadosParaEnviar).toString();
+        
+            // Redirecionar com os dados na URL
+            window.location.href = `atualizar-livro.html?${queryParams}`;
         });
-
 
         const iconExcluir = document.createElement('img');
         iconExcluir.addEventListener("click", () => excluirLivro(livro.idLivro)); 

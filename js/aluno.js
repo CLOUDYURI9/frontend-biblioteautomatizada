@@ -31,39 +31,6 @@ async function enviaFormulario() {
     }
 }
 
-async function formulario(idALuno) {
-    
-    // recuperar as informações do formulário e colocar em objeto JSON
-    const alunoDTO = {
-        "nome": document.querySelectorAll("input")[0].value,
-        "sobrenome": document.querySelectorAll("input")[1].value,
-        "dataNascimento": document.querySelectorAll("input")[2].value,
-        "endereco": document.querySelectorAll("input")[3].value,
-        "email": document.querySelectorAll("input")[4].value,
-        "celular": Number(document.querySelectorAll("input")[5].value)
-    }
-
-    
-    try {
-        const urlA = `http://localhost:3333/atualizar/aluno/${idAluno}`;
-        const respostaServidor = await fetch(urlA, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(alunoDTO)
-        });
-
-        if (!respostaServidor.ok) {
-            throw new Error("Erro ao enviar os dados para o servidor. Contate o administrador do sistema");
-        }
-
-        alert("Aluno atualizado com sucesso!");
-    } catch (error) {
-        console.log(error);
-        alert(`Erro ao se comunicar com o servidor. ${error}`);
-    }
-}
 
     async function recuperarListaAlunos() {
 
@@ -92,7 +59,6 @@ async function criarTabelaAlunos(alunos) {
         // Cria e preenche cada célula da linha
         const id = document.createElement('td');
         id.textContent = aluno.idAluno; // Preenche com o id do aluno
-
 
         const ra = document.createElement('td');
         ra.textContent = aluno.ra; // Preenche com a ra do aluno
@@ -124,8 +90,24 @@ async function criarTabelaAlunos(alunos) {
         iconAtualizar.alt = 'Ícone de edição'; // Texto alternativo para acessibilidade
         
         iconAtualizar.addEventListener('click', () => {
-            window.location.href = "./atualizar-aluno.html";
-        }, () => formulario(aluno.idAluno));
+            // Criar objeto com os dados necessários
+            const dadosParaEnviar = {
+                celular: aluno.celular,
+                dataNascimento: aluno.dataNascimento,
+                email: aluno.email,
+                endereco: aluno.endereco,
+                idAluno: aluno.idAluno,
+                nome: aluno.nome,
+                ra: aluno.ra,
+                sobrenome: aluno.sobrenome
+            };
+        
+            // Converter para parâmetros de URL
+            const queryParams = new URLSearchParams(dadosParaEnviar).toString();
+        
+            // Redirecionar com os dados na URL
+            window.location.href = `atualizar-aluno.html?${queryParams}`;
+        });
 
 
         const iconExcluir = document.createElement('img'); // Cria o elemento <img>
