@@ -4,8 +4,8 @@ async function enviaFormulario() {
     const emprestimoDTO = {
         "idAluno": Number(document.querySelectorAll("input")[0].value),
         "idLivro": Number(document.querySelectorAll("input")[1].value),
-        "dataEmprestimo": Number(document.querySelectorAll("input")[2].value),
-        "dataDevolucao": Number(document.querySelectorAll("input")[3].value),
+        "dataEmprestimo": document.querySelectorAll("input")[2].value,
+        "dataDevolucao": document.querySelectorAll("input")[3].value,
         "statusEmprestimo": document.querySelectorAll("input")[4].value
     }
 
